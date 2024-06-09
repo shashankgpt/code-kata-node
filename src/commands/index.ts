@@ -12,5 +12,5 @@ export default function initApp() {
     .version(packageJSON.version);
 
     createTodoCommand(cmd);
-    cmd.parse();
+    cmd.parse(process.argv);
 }
