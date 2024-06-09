@@ -15,6 +15,6 @@ export async function handleGetTodoCommand(countArg: any) {
       console.log(`Id:${id} ${completed ? "[x]" : "[ ]"} - ${title}`);
     });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
