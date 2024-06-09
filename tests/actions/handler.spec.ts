@@ -16,9 +16,10 @@ describe("handleGetTodoCommand", () => {
   });
   describe("When API request is success", () => {
     it("should display todo list", async () => {
-      await handleGetTodoCommand(2);
-      expect(logMock).toHaveBeenCalledTimes(2);
+      await handleGetTodoCommand(2, {even: true});
+      expect(logMock).toHaveBeenCalledTimes(3);
       expect(logMock.mock.calls).toMatchObject([
+        ["Fetching even todo list..."],
         ["Id:2 [ ] - quis ut nam facilis et officia qui"],
         ["Id:4 [x] - et porro tempora"],
       ]);
@@ -31,7 +32,7 @@ describe("handleGetTodoCommand", () => {
     });
 
     it("should display error", async () => {
-      await handleGetTodoCommand(1);
+      await handleGetTodoCommand(1, {even: true});
       expect(errorLog).toHaveBeenCalledTimes(1);
       expect(errorLog).toHaveBeenCalledWith(new Error("error"));
     });
@@ -39,7 +40,7 @@ describe("handleGetTodoCommand", () => {
 
   describe("When invalid input is given", () => {
     it("should display error", async () => {
-      await handleGetTodoCommand("invalid");
+      await handleGetTodoCommand("invalid", {even: true});
       expect(warnLog).toHaveBeenCalledTimes(1);
       expect(warnLog).toHaveBeenCalledWith(
         "Invalid input. Using default count of 20\n"

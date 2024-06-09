@@ -5,8 +5,12 @@ import { getEvenNumber, displayTodos } from "../util";
 const defaultCount = 20;
 const maxCount = 100;
 
-export async function handleGetTodoCommand(countArg: any) {
+export async function handleGetTodoCommand(countArg: any, options: any) {
   try {
+    if (!options.even) {
+      throw new Error("Option --even is required");
+    }
+    console.log(`Fetching even todo list...`);
     // validate the input
     let count = defaultCount;
     if (
