@@ -1,4 +1,12 @@
-# Exercise
+# Todo App
+
+### How to start the app
+
+Start - `npm start`
+
+Test - `npm run test`
+
+# Excercise
 
 The goal of the project is to build a command line tool.
 

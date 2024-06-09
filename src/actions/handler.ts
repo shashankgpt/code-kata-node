@@ -13,6 +13,7 @@ export async function handleGetTodoCommand(countArg: any) {
     if (validateResult.error) {
       throw new Error(validateResult.error.message);
     }
+    
     displayTodos(todos);
   } catch (error) {
     console.error(error);
