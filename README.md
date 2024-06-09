@@ -4,7 +4,11 @@
 
 Start - `npm start`
 
+help - `npm start help get-even`
+
 Test - `npm run test`
+
+Usage - ` npm start get-node 20`
 
 # Excercise
 
