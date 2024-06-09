@@ -6,6 +6,6 @@ export default function createTodoCommand(cmd: Command) {
         .command('get-todo [count]')
         .description('fetch a todo and display it')
         .alias('gt')
-        .option('-e, --even', 'display even todos', true)
+        .option('-e, --even', 'display even todos', true) // setting true by default because other options are not implemented
         .action(handleGetTodoCommand);
 }
