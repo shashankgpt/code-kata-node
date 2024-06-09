@@ -1,6 +1,6 @@
 import { Command } from "commander";
 import packageJSON from "../package.json";
-import { handleGetTodoFirstEven20Command } from "./actions/handler";
+import { handleGetTodoCommand } from "./actions/handler";
 
 const program = new Command();
 
@@ -9,9 +9,9 @@ program
     .description(packageJSON.description)
     .version(packageJSON.version);
 
-program.command('get-even-20')
+program.command('get-even [count]')
     .description('fetch a todo and display it')
-    .option('--first 20', 'display just the first substring')
-    .action(handleGetTodoFirstEven20Command);
+    .option('[count]', 'number of todos to be displayed (default: 20)')
+    .action(handleGetTodoCommand);
 
 program.parse();

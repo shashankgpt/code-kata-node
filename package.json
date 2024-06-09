@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/shashankgpt/code-kata-node#readme",
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "joi": "^17.13.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.2"
