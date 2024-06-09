@@ -1,0 +1,25 @@
+{
+  "name": "code-kata-node",
+  "version": "1.0.0",
+  "description": "The goal of the project is to build a simple business loan application system.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashankgpt/code-kata-node.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Shashank Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shashankgpt/code-kata-node/issues"
+  },
+  "homepage": "https://github.com/shashankgpt/code-kata-node#readme",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
