@@ -4,11 +4,11 @@
 
 Start - `npm start`
 
-help - `npm start help get-even`
+help - `npm start help get-todo`
 
 Test - `npm run test`
 
-Usage - ` npm start get-node 20`
+Usage - `npm run get-even`
 
 # Excercise
 

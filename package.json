@@ -6,7 +6,8 @@
   "scripts": {
     "prestart": "npx tsc",
     "start": "node bin/index.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "get-even": "npm start get-todo 20"
   },
   "repository": {
     "type": "git",
