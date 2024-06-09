@@ -1,9 +1,11 @@
 import { getTodos } from "../request";
-import { getFirstTwentyEvenNumbers } from "../util";
+import { getEvenNumber } from "../util";
 
 export function handleGetTodoFirstEven20Command() {
-    const todoList = getFirstTwentyEvenNumbers();
+    const todoList = getEvenNumber();
     getTodos(todoList).then((todos) => {
-        console.log(todos);
+        todos.forEach(({ id, title, completed }) => {
+            console.log(`${completed ? '✅' : '❌'} Id:${id} - ${title}`);
+        });
     });
 }

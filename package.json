@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/shashankgpt/code-kata-node#readme",
   "dependencies": {
-    "chalk": "^5.3.0",
     "commander": "^12.1.0"
   },
   "devDependencies": {
