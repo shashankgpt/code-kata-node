@@ -1,19 +1,13 @@
-import { Todo } from "../type";
+import { NumberType } from "../type";
 
-export function getEvenNumber(count: number): number[] {
+export function getNumberList(count: number, type: NumberType): number[] {
     if (!count) return [];
-    const even20 = [];
+    if (type !== NumberType.EVEN) { // Not Implemented for other types
+        throw new Error('Only even numbers are allowed');
+    }
+    const number = [];
     for (let i = 1; i <= count; i++) {
-        even20.push(i * 2);
+        number.push(i * 2);
     }
-    return even20;
-}
-
-export function displayTodos(todos: Todo[]): void {
-    if (!todos.length) {
-        console.log("No todos found");
-    }
-    todos.forEach(({ id, title, completed }) => {
-        console.log(`Id:${id} ${completed ? "[x]" : "[ ]"} - ${title}`);
-    });
+    return number;
 }

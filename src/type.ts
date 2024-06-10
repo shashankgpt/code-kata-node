@@ -4,3 +4,9 @@ export interface Todo {
     completed: boolean;
     userId?: number;
 }
+
+export enum NumberType {
+    EVEN = 'even',
+    ODD = 'odd',
+    ALL = 'all'
+}

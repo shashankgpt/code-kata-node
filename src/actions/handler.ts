@@ -1,7 +1,8 @@
 import { getTodos } from "../request";
 import { getListSchema } from "../schema";
-import { getEvenNumber, displayTodos } from "../util";
-import { parseInput } from "./bll";
+import { NumberType } from "../type";
+import { getNumberList } from "../util";
+import { parseInput, displayTodos } from "./bll";
 
 export async function handleGetTodoCommand(countArg: any, options: any) {
   try {
@@ -10,7 +11,7 @@ export async function handleGetTodoCommand(countArg: any, options: any) {
     }
     console.log(`Fetching even todo list...`);
     let count = parseInput(countArg);
-    const todoList = getEvenNumber(count);
+    const todoList = getNumberList(count, NumberType.EVEN);
     const todos = await getTodos(todoList);
 
     // validate the response
