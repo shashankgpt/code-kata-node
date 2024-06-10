@@ -1,9 +1,7 @@
 import { getTodos } from "../request";
 import { getListSchema } from "../schema";
 import { getEvenNumber, displayTodos } from "../util";
-
-const defaultCount = 20;
-const maxCount = 100;
+import { parseInput } from "./bll";
 
 export async function handleGetTodoCommand(countArg: any, options: any) {
   try {
@@ -11,20 +9,7 @@ export async function handleGetTodoCommand(countArg: any, options: any) {
       throw new Error("Option --even is required");
     }
     console.log(`Fetching even todo list...`);
-    // validate the input
-    let count = defaultCount;
-    if (
-      countArg &&
-      !Number.isNaN(Number(countArg)) &&
-      Number(countArg) === Number.parseInt(countArg)
-    ) {
-      if (count > maxCount) {
-        throw new Error(`Count should be less than ${maxCount}`);
-      }
-      count = Number.parseInt(countArg);
-    } else {
-      console.warn(`Invalid input. Using default count of ${count}\n`);
-    }
+    let count = parseInput(countArg);
     const todoList = getEvenNumber(count);
     const todos = await getTodos(todoList);
 

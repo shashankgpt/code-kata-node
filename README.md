@@ -45,3 +45,7 @@ Submit a GitHub / Bitbucket repo for review. No ZIP files!
 ### Do I need to write tests for connecting to API ?
 
 That can be ommitted.
+
+### Known Limitations
+
+It is just implemented for even numbers. There is limit of 100 todos. If we need more than 100 todo. we can implment batching/chunking.
