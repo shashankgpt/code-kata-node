@@ -2,6 +2,8 @@
 
 ### How to start the app
 
+Use `Node 18+`
+
 Start - `npm start`
 
 help - `npm start help get-todo`
