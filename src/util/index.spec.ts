@@ -1,40 +1,16 @@
-import { Todo } from "../type";
-import { displayTodos, getEvenNumber } from "./";
+import { NumberType } from "../type";
+import { getNumberList } from "./";
 
-describe("getEvenNumber", () => {
+describe("getNumberList", () => {
   it("should return an array of even numbers", () => {
-    expect(getEvenNumber(2)).toEqual([2, 4]);
+    expect(getNumberList(2, NumberType.EVEN)).toEqual([2, 4]);
   });
 
   it("should return empty array", () => {
-    expect(getEvenNumber(0)).toEqual([]);
-  });
-});
-
-describe("displayTodos", () => {
-  const mockLog = jest.fn();
-  beforeAll(() => {
-    console.log = mockLog;
+    expect(getNumberList(0, NumberType.EVEN)).toEqual([]);
   });
 
-  beforeEach(() => {
-    mockLog.mockReset();
-  });
-
-  it("When empty array is given should display No todos found", () => {
-    displayTodos([]);
-    expect(mockLog.mock.calls).toEqual([["No todos found"]]);
-  });
-
-  it("should display todos with correct format", () => {
-    const todos: Todo[] = [
-      { id: 1, title: "Todo 1", completed: true },
-      { id: 2, title: "Todo 2", completed: false },
-    ];
-    displayTodos(todos);
-    expect(mockLog.mock.calls).toEqual([
-      ["Id:1 [x] - Todo 1"],
-      ["Id:2 [ ] - Todo 2"],
-    ]);
+  it("should throw an error when Number type is not even", () => {
+    expect(() => getNumberList(2, NumberType.ODD)).toThrow('Only even numbers are allowed');
   });
 });

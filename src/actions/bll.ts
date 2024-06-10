@@ -1,4 +1,5 @@
-import { Todo } from "../type";
+import { Todo, ITodoDisplay } from "../type";
+import ConsoleTodoDisplay from "../ConsoleTodoDisplay";
 
 const defaultCount = 20;
 const maxCount = 100;
@@ -24,7 +25,6 @@ export function displayTodos(todos: Todo[]): void {
   if (!todos.length) {
     console.log("No todos found");
   }
-  todos.forEach(({ id, title, completed }) => {
-    console.log(`Id:${id} ${completed ? "[x]" : "[ ]"} - ${title}`);
-  });
+  const todoDisplay: ITodoDisplay = new ConsoleTodoDisplay();
+  todoDisplay.display(todos);
 }

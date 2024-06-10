@@ -20,8 +20,8 @@ describe("handleGetTodoCommand", () => {
       expect(logMock).toHaveBeenCalledTimes(3);
       expect(logMock.mock.calls).toMatchObject([
         ["Fetching even todo list..."],
-        ["Id:2 [ ] - quis ut nam facilis et officia qui"],
-        ["Id:4 [x] - et porro tempora"],
+        ["Id: 2 [ ] - quis ut nam facilis et officia qui"],
+        ["Id: 4 [x] - et porro tempora"],
       ]);
     });
   });

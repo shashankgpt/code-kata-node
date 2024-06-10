@@ -10,3 +10,7 @@ export enum NumberType {
     ODD = 'odd',
     ALL = 'all'
 }
+
+export interface ITodoDisplay {
+    display(todos: Todo[]): void;
+  }

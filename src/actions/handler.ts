@@ -1,8 +1,9 @@
-import { getTodos } from "../request";
+import TodoApi from "../ApiTodosFetcher";
 import { getListSchema } from "../schema";
-import { NumberType } from "../type";
+import { NumberType, ITodoDisplay } from "../type";
 import { getNumberList } from "../util";
-import { parseInput, displayTodos } from "./bll";
+import { parseInput } from "./bll";
+import ConsoleTodoDisplay from "../ConsoleTodoDisplay";
 
 export async function handleGetTodoCommand(countArg: any, options: any) {
   try {
@@ -12,15 +13,15 @@ export async function handleGetTodoCommand(countArg: any, options: any) {
     console.log(`Fetching even todo list...`);
     let count = parseInput(countArg);
     const todoList = getNumberList(count, NumberType.EVEN);
-    const todos = await getTodos(todoList);
+    const todos = await TodoApi.getTodosParallel(todoList);
 
     // validate the response
     const validateResult = getListSchema.validate(todos);
     if (validateResult.error) {
       throw new Error(validateResult.error.message);
     }
-
-    displayTodos(todos);
+    const todoDisplay: ITodoDisplay = new ConsoleTodoDisplay();
+    todoDisplay.display(todos);
   } catch (error) {
     console.error(error);
   }
