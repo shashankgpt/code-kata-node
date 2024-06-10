@@ -1,5 +1,5 @@
-import ConsoleTodoDisplay from "./";
-import { Todo } from "../type";
+import ConsoleTodoDisplay from ".";
+import { Todo } from "../../type";
 
 describe('ConsoleTodoDisplay', () => {
     const mockLog = jest.fn();

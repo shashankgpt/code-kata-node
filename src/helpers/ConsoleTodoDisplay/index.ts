@@ -1,4 +1,4 @@
-import { Todo, ITodoDisplay } from "../type";
+import { Todo, ITodoDisplay } from "../../type";
 
 export default class ConsoleTodoDisplay implements ITodoDisplay {
     display(todos: Todo[]): void {

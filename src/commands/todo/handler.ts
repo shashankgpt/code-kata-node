@@ -1,9 +1,9 @@
-import TodoApi from "../ApiTodosFetcher";
-import { getListSchema } from "../schema";
-import { NumberType, ITodoDisplay } from "../type";
-import { getNumberList } from "../util";
+import TodoApi from "../../helpers/ApiTodosFetcher";
+import { getListSchema } from "../../schema";
+import { NumberType, ITodoDisplay } from "../../type";
+import { getNumberList } from "../../util";
 import { parseInput } from "./bll";
-import ConsoleTodoDisplay from "../ConsoleTodoDisplay";
+import ConsoleTodoDisplay from "../../helpers/ConsoleTodoDisplay";
 
 export async function handleGetTodoCommand(countArg: any, options: any) {
   try {

@@ -1,4 +1,4 @@
-import { Todo } from "../type";
+import { Todo } from "../../type";
 
 const URL = 'https://jsonplaceholder.typicode.com/todos';
 

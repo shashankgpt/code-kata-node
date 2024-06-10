@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import createTodoCommand from "./get-todo";
+import createTodoCommand from "./todo/command";
 import packageJSON from "../../package.json";
 
 

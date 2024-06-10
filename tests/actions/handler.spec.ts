@@ -1,4 +1,4 @@
-import { handleGetTodoCommand } from "../../src/actions/handler";
+import { handleGetTodoCommand } from "../../src/commands/todo/handler";
 const logMock = jest.fn();
 console.log = logMock;
 

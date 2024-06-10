@@ -1,5 +1,5 @@
-import { Todo, ITodoDisplay } from "../type";
-import ConsoleTodoDisplay from "../ConsoleTodoDisplay";
+import { Todo, ITodoDisplay } from "../../type";
+import ConsoleTodoDisplay from "../../helpers/ConsoleTodoDisplay";
 
 const defaultCount = 20;
 const maxCount = 100;

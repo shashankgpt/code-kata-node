@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { handleGetTodoCommand } from "../actions/handler";
+import { handleGetTodoCommand } from "./handler";
 
 export default function createTodoCommand(cmd: Command) {
     cmd
