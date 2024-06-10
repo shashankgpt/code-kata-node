@@ -10,7 +10,7 @@ help - `npm start help get-todo`
 
 Test - `npm run test`
 
-Usage - `npm run get-even`
+Usage - `npm run get-even-todo`
 
 # Excercise
 
