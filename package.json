@@ -7,7 +7,8 @@
     "prestart": "npx tsc",
     "start": "node bin/index.js",
     "test": "jest --coverage",
-    "get-even-todo": "npm start -- get-todo 20"
+    "get-even-todo": "npm start -- get-todo 20",
+    "help": "npm start help get-even-todo"
   },
   "repository": {
     "type": "git",

@@ -6,7 +6,7 @@ Use `Node 18+`
 
 Start - `npm start`
 
-help - `npm start help get-todo`
+help - `npm start help get-even-todo`
 
 Test - `npm run test`
 
